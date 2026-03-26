@@ -46,31 +46,37 @@ const stats = [
     title: "Store Conversion Optimization",
     desc: "Achieved a 7.23% conversion rate through strategic UI/UX audits and precision Meta Ads targeting.",
     image: convImg,
+    icon: <BarChart3 className="w-5 h-5 text-emerald-400" />,
   },
   {
     title: "E-commerce Revenue Scaling",
     desc: "Generated over PKR 1.5M in sales by implementing high-converting Shopify funnels and scaling.",
     image: revenueImg,
+    icon: <TrendingUp className="w-5 h-5 text-emerald-400" />,
   },
   {
     title: "Meta Ads ROAS Success",
     desc: "Delivered a consistent 8.33x Return on Ad Spend (ROAS) for premium lifestyle brands.",
     image: metaImg,
+    icon: <Target className="w-5 h-5 text-emerald-400" />,
   },
   {
     title: "Daily Sales Performance",
     desc: "Successfully scaled daily store revenue to PKR 246K with high-intent audience targeting.",
     image: salesImg,
+    icon: <ShoppingBag className="w-5 h-5 text-emerald-400" />,
   },
   {
     title: "Low CPC Traffic Generation",
     desc: "Optimized ad campaigns to achieve a low CPC of PKR 7.73, driving massive cost-effective traffic.",
     image: cpcImg,
+    icon: <Zap className="w-5 h-5 text-emerald-400" />,
   },
   {
     title: "Business Growth Analytics",
     desc: "Detailed tracking and performance reporting to ensure sustainable month-on-month growth.",
     image: growthImg,
+    icon: <BarChart3 className="w-5 h-5 text-emerald-400" />,
   },
 ];
 
@@ -78,26 +84,32 @@ const projects = [
   {
     title: "Luxury Watch Marketing",
     image: watch,
+    desc: "Strategic Meta Ads campaigns for high-end luxury watch brands.",
   },
   {
     title: "Shopify Store Growth",
     image: shopify,
+    desc: "Complete Shopify optimization and scaling strategies.",
   },
   {
     title: "Strategy & Funnel Planning",
     image: funnel,
+    desc: "Custom sales funnels designed for maximum conversion.",
   },
   {
     title: "Brand Authority Scaling",
     image: branding,
+    desc: "Building brand authority and market positioning.",
   },
   {
     title: "Social Media Mastery",
     image: social,
+    desc: "Engaging content strategies across all social platforms.",
   },
   {
     title: "Performance Analytics",
     image: analytics,
+    desc: "Data-driven insights for continuous improvement.",
   },
 ];
 
@@ -190,9 +202,9 @@ export default function App() {
       </section>
 
       {/* Image Slider Marquee */}
-      <div className="relative overflow-hidden py-12 border-y border-white/5 bg-white/[0.01]">
-        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10"></div>
-        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10"></div>
+      <div className="relative overflow-hidden py-12 border-y border-white/5 bg-white/1">
+        <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#0a0a0a] to-transparent z-10"></div>
+        <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-[#0a0a0a] to-transparent z-10"></div>
         
         <motion.div 
           className="flex gap-6 whitespace-nowrap"
@@ -204,7 +216,7 @@ export default function App() {
           }}
         >
           {[...demoImages, ...demoImages].map((img, i) => (
-            <div key={i} className="flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden border border-white/10 glass-card group">
+            <div key={i} className="shrink-0 w-80 h-52 rounded-2xl overflow-hidden border border-white/10 glass-card group">
               <img
   src={img}
   alt="slider"
@@ -289,7 +301,7 @@ export default function App() {
       </section>
 
       {/* Proven Results Section */}
-      <section id="results" className="py-20 px-6 bg-white/[0.02]">
+      <section id="results" className="py-20 px-6 bg-white/2">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 text-center">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Proven Results & E-commerce Success</h2>
@@ -318,7 +330,7 @@ export default function App() {
                   {stat.icon}
                   <h3 className="font-bold text-lg">{stat.title}</h3>
                 </div>
-                <p className="text-white/60 text-sm leading-relaxed mb-6 flex-grow">
+                <p className="text-white/60 text-sm leading-relaxed mb-6 grow">
                   {stat.desc}
                 </p>
                 <div className="flex items-center text-emerald-400 text-xs font-bold uppercase tracking-wider group cursor-pointer">
@@ -346,7 +358,7 @@ export default function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-3xl aspect-[4/5]"
+                className="group relative overflow-hidden rounded-3xl aspect-4/5"
               >
                 <img 
                   src={project.image} 
@@ -354,7 +366,7 @@ export default function App() {
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
                 <div className="absolute bottom-0 p-8 w-full">
                   <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                   <p className="text-white/70 text-sm mb-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
@@ -371,7 +383,7 @@ export default function App() {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-20 px-6 bg-white/[0.02]">
+      <section id="testimonials" className="py-20 px-6 bg-white/2">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 text-center">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">What Our Clients Say</h2>
@@ -416,7 +428,7 @@ export default function App() {
         href="https://wa.me/923204108738?text=Hello%20Saifullah,%20I'm%20interested%20in%20your%20services.%20How%20can%20you%20help%20me%20grow%20my%20business?"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 z-[100] group"
+        className="fixed bottom-8 right-8 z-100 group"
       >
         <div className="absolute -inset-2 bg-emerald-500/20 blur-xl rounded-full group-hover:bg-emerald-500/40 transition-all duration-500"></div>
         <div className="relative w-16 h-16 bg-[#009966] text-white rounded-full flex items-center justify-center shadow-2xl shadow-emerald-500/20 hover:scale-110 transition-all duration-300">
