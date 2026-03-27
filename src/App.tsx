@@ -149,19 +149,19 @@ const testimonials = [
 
 export default function App() {
   return (
-    <div className="min-h-screen font-sans">
+    <div id="top" className="min-h-screen font-sans">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-[#f5f5f5]/90 backdrop-blur-lg border-b border-black/5 text-black">
+      <nav aria-label="Primary navigation" className="fixed top-0 w-full z-50 bg-[#f5f5f5]/90 backdrop-blur-lg border-b border-black/5 text-black">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="text-2xl font-bold tracking-tighter">
             Saifullah <span className="text-emerald-600">Portfolio</span>
           </div>
           <div className="hidden md:flex gap-8 text-sm font-medium text-black/60">
-            <a href="#" className="hover:text-black transition-colors">Home</a>
-            <a href="#results" className="hover:text-black transition-colors">Results</a>
-            <a href="#brands" className="hover:text-black transition-colors">Brands</a>
-            <a href="#testimonials" className="hover:text-black transition-colors">Testimonials</a>
-            <a href="#contact" className="hover:text-black transition-colors">Contact</a>
+            <a href="#top" aria-label="Go to top of page" className="hover:text-black transition-colors">Home</a>
+            <a href="#results" aria-label="Go to results section" className="hover:text-black transition-colors">Results</a>
+            <a href="#brands" aria-label="Go to brands section" className="hover:text-black transition-colors">Brands</a>
+            <a href="#testimonials" aria-label="Go to testimonials section" className="hover:text-black transition-colors">Testimonials</a>
+            <a href="#contact" aria-label="Go to contact section" className="hover:text-black transition-colors">Contact</a>
           </div>
         </div>
       </nav>
@@ -490,8 +490,11 @@ export default function App() {
                     </label>
                     <input
                       id="name"
+                      name="name"
                       type="text"
                       placeholder="Enter your name"
+                      autoComplete="name"
+                      aria-label="Your name"
                       className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition focus:border-emerald-400 focus:bg-white/8"
                     />
                   </div>
@@ -501,8 +504,11 @@ export default function App() {
                     </label>
                     <input
                       id="email"
+                      name="email"
                       type="email"
                       placeholder="Enter your email"
+                      autoComplete="email"
+                      aria-label="Email address"
                       className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition focus:border-emerald-400 focus:bg-white/8"
                     />
                   </div>
@@ -514,8 +520,10 @@ export default function App() {
                   </label>
                   <input
                     id="service"
+                    name="service"
                     type="text"
                     placeholder="Meta Ads, Shopify Growth, CRO, etc."
+                    aria-label="Service needed"
                     className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition focus:border-emerald-400 focus:bg-white/8"
                   />
                 </div>
@@ -526,14 +534,17 @@ export default function App() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={5}
                     placeholder="Tell me about your business goals..."
+                    aria-label="Project details"
                     className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition focus:border-emerald-400 focus:bg-white/8 resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
+                  aria-label="Send inquiry"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-8 py-4 text-black font-bold transition-all hover:bg-emerald-400 hover:scale-105 shadow-xl shadow-emerald-500/20"
                 >
                   Send Inquiry
@@ -576,6 +587,7 @@ export default function App() {
         href="https://wa.me/923204108738?text=Hello%20Saifullah,%20I'm%20interested%20in%20your%20services.%20How%20can%20you%20help%20me%20grow%20my%20business?"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Contact Saifullah on WhatsApp"
         className="fixed bottom-8 right-8 z-100 group"
       >
         <div className="absolute -inset-2 bg-emerald-500/20 blur-xl rounded-full group-hover:bg-emerald-500/40 transition-all duration-500"></div>
@@ -598,18 +610,18 @@ export default function App() {
               Saifullah <span className="text-emerald-600">Portfolio</span>
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-sm font-medium text-black/60 text-center">
-              <a href="#" className="hover:text-black transition-colors">Home</a>
-              <a href="#results" className="hover:text-black transition-colors">Results</a>
-              <a href="#brands" className="hover:text-black transition-colors">Brands</a>
-              <a href="#testimonials" className="hover:text-black transition-colors">Testimonials</a>
-              <a href="#contact" className="hover:text-black transition-colors">Contact</a>
+              <a href="#top" aria-label="Go to top of page" className="hover:text-black transition-colors">Home</a>
+              <a href="#results" aria-label="Go to results section" className="hover:text-black transition-colors">Results</a>
+              <a href="#brands" aria-label="Go to brands section" className="hover:text-black transition-colors">Brands</a>
+              <a href="#testimonials" aria-label="Go to testimonials section" className="hover:text-black transition-colors">Testimonials</a>
+              <a href="#contact" aria-label="Go to contact section" className="hover:text-black transition-colors">Contact</a>
             </div>
             <div className="flex gap-4">
-              <a href="tel:+923204108738" className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all group relative">
+              <a href="tel:+923204108738" aria-label="Call Saifullah" className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all group relative">
                 <Phone className="w-5 h-5" />
                 <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">+92 320 4108738</span>
               </a>
-              <a href="mailto:umersaifullah177@gmail.com" className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all group relative">
+              <a href="mailto:umersaifullah177@gmail.com" aria-label="Email Saifullah" className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all group relative">
                 <Mail className="w-5 h-5" />
                 <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">umersaifullah177@gmail.com</span>
               </a>
