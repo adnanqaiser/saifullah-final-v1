@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import ecommerce from "./assets/images/ecommerce.webp";
 import watch from "./assets/images/watch.webp";
 import shopify from "./assets/images/shopify.webp";
 import funnel from "./assets/images/funnel.webp";
@@ -222,6 +221,8 @@ export default function App() {
               <img
   src={img}
   alt="slider"
+  loading="lazy"
+  decoding="async"
   className="w-full h-full object-cover rounded-xl transition-transform duration-500 hover:scale-110 hover:shadow-xl"
 />
             </div>
@@ -267,8 +268,10 @@ export default function App() {
               <div className="absolute -inset-4 bg-emerald-500/20 blur-3xl rounded-full"></div>
               <div className="relative glass-card overflow-hidden rounded-3xl border-white/20">
                 <img
-                src={ecommerce}
-                alt="E-commerce"
+                src={shopify}
+                alt="Shopify growth strategy"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover rounded-2xl"
             />
               </div>
@@ -324,6 +327,8 @@ export default function App() {
                   <img 
                     src={stat.image} 
                     alt={stat.title} 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-48 object-cover hover:scale-110 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />
@@ -365,6 +370,8 @@ export default function App() {
                 <img 
                   src={project.image} 
                   alt={project.title} 
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
@@ -554,6 +561,7 @@ export default function App() {
                   src="https://www.google.com/maps?q=20,0&z=2&output=embed"
                   className="h-[380px] w-full"
                   loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
