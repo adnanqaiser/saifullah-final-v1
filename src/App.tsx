@@ -570,7 +570,7 @@ export default function App() {
                 <iframe
                   title="Worldwide business coverage map"
                   src="https://www.google.com/maps?q=20,0&z=2&output=embed"
-                  className="h-[380px] w-full"
+                  className="h-96 w-full"
                   loading="lazy"
                   decoding="async"
                   referrerPolicy="no-referrer-when-downgrade"
