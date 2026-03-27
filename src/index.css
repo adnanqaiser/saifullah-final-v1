@@ -22,5 +22,5 @@
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400;
+  @apply bg-clip-text text-transparent bg-linear-to-r from-emerald-400 to-cyan-400;
 }

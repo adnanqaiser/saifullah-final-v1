@@ -1,6 +1,7 @@
 /**
  * @license
- * SPDX-License-Identifier: Apache-2.0*/
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
 import ecommerce from "./assets/images/ecommerce.webp";
 import watch from "./assets/images/watch.webp";
@@ -161,10 +162,8 @@ export default function App() {
             <a href="#results" className="hover:text-black transition-colors">Results</a>
             <a href="#brands" className="hover:text-black transition-colors">Brands</a>
             <a href="#testimonials" className="hover:text-black transition-colors">Testimonials</a>
+            <a href="#contact" className="hover:text-black transition-colors">Contact</a>
           </div>
-          <a href="mailto:umersaifullah177@gmail.com" className="bg-emerald-500 hover:bg-emerald-600 text-black px-6 py-2 rounded-full text-sm font-bold transition-all">
-            Get in Touch
-          </a>
         </div>
       </nav>
 
@@ -400,7 +399,7 @@ export default function App() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="glass-card p-8 relative"
+                className="glass-card p-8 relative flex flex-col"
               >
                 <div className="flex gap-1 mb-6">
                   {[...Array(5)].map((_, i) => (
@@ -410,7 +409,7 @@ export default function App() {
                 <p className="text-white/80 italic mb-8 leading-relaxed">
                   "{t.text}"
                 </p>
-                <div className="flex items-center gap-4">
+                <div className="mt-auto flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold">
                     {t.name[0]}
                   </div>
@@ -426,6 +425,143 @@ export default function App() {
         </div>
       </section>
       
+
+      {/* Contact Form Section */}
+      <section id="contact" className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="glass-card p-8 md:p-12"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-emerald-400 text-sm font-semibold uppercase tracking-[0.3em] mb-4">
+                  Contact Me
+                </p>
+                <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 leading-tight">
+                  Let&apos;s Build Your Next <span className="text-gradient">Winning Campaign</span>
+                </h2>
+                <p className="text-white/65 text-lg leading-relaxed mb-8 max-w-xl">
+                  Ready to scale your Shopify store or improve your Meta Ads performance? Send your details below and let&apos;s discuss a strategy tailored to your brand.
+                </p>
+
+                <div className="space-y-4 text-white/70">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-white/40 uppercase tracking-wider">Email</p>
+                      <a href="mailto:umersaifullah177@gmail.com" className="hover:text-emerald-400 transition-colors">
+                        umersaifullah177@gmail.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-white/40 uppercase tracking-wider">Phone</p>
+                      <a href="tel:+923204108738" className="hover:text-emerald-400 transition-colors">
+                        +92 320 4108738
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <form className="space-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label htmlFor="name" className="block text-sm text-white/60 mb-2">
+                      Your Name
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="Enter your name"
+                      className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition focus:border-emerald-400 focus:bg-white/8"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm text-white/60 mb-2">
+                      Email Address
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="Enter your email"
+                      className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition focus:border-emerald-400 focus:bg-white/8"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-sm text-white/60 mb-2">
+                    Service Needed
+                  </label>
+                  <input
+                    id="service"
+                    type="text"
+                    placeholder="Meta Ads, Shopify Growth, CRO, etc."
+                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition focus:border-emerald-400 focus:bg-white/8"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm text-white/60 mb-2">
+                    Project Details
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={5}
+                    placeholder="Tell me about your business goals..."
+                    className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-white/30 outline-none transition focus:border-emerald-400 focus:bg-white/8 resize-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-8 py-4 text-black font-bold transition-all hover:bg-emerald-400 hover:scale-105 shadow-xl shadow-emerald-500/20"
+                >
+                  Send Inquiry
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </form>
+            </div>
+
+            <div className="mt-12 border-t border-white/10 pt-10">
+              <div className="mb-6">
+                <p className="text-emerald-400 text-sm font-semibold uppercase tracking-[0.3em] mb-3">
+                  Worldwide Presence
+                </p>
+                <h3 className="text-2xl md:text-3xl font-display font-bold mb-3">
+                  Working With Brands <span className="text-gradient">Across the World</span>
+                </h3>
+                <p className="text-white/60 max-w-2xl leading-relaxed">
+                  I help e-commerce businesses globally with Meta Ads strategy, Shopify scaling, and conversion-focused growth solutions.
+                </p>
+              </div>
+
+              <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-xl shadow-black/20">
+                <iframe
+                  title="Worldwide business coverage map"
+                  src="https://www.google.com/maps?q=20,0&z=2&output=embed"
+                  className="h-[380px] w-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
 
       {/* Floating WhatsApp Button */}
       <a
@@ -447,17 +583,18 @@ export default function App() {
       </a>
 
       {/* Footer */}
-      <footer className="py-5 px-6 bg-[#f5f5f5] text-black border-t border-black/">
+      <footer className="py-8 px-6 bg-[#f5f5f5] text-black border-t border-black/10">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-10 mb-16">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
             <div className="text-3xl font-bold tracking-tighter">
               Saifullah <span className="text-emerald-600">Portfolio</span>
             </div>
-            <div className="flex gap-8 text-sm font-medium text-black/60">
+            <div className="flex flex-wrap justify-center gap-6 text-sm font-medium text-black/60 text-center">
               <a href="#" className="hover:text-black transition-colors">Home</a>
               <a href="#results" className="hover:text-black transition-colors">Results</a>
               <a href="#brands" className="hover:text-black transition-colors">Brands</a>
               <a href="#testimonials" className="hover:text-black transition-colors">Testimonials</a>
+              <a href="#contact" className="hover:text-black transition-colors">Contact</a>
             </div>
             <div className="flex gap-4">
               <a href="tel:+923204108738" className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all group relative">
@@ -470,7 +607,7 @@ export default function App() {
               </a>
             </div>
           </div>
-          <div className="text-center text-black/40 text-sm">
+          <div className="border-t border-black/10 pt-5 text-center text-black/40 text-sm">
             <p className="mb-2">Contact: <a href="mailto:umersaifullah177@gmail.com" className="text-emerald-600 hover:underline">umersaifullah177@gmail.com</a></p>
             <p>© 2026 Saifullah Portfolio | Expert Web Developer & Meta Ads Strategist</p>
           </div>
