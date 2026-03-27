@@ -1,29 +1,32 @@
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0*/
-import ecommerce from "./assets/images/ecommerce.jpg";
-import watch from "./assets/images/watch.jpg";
-import shopify from "./assets/images/shopify.jpg";
-import funnel from "./assets/images/funnel.jpg";
-import branding from "./assets/images/branding.jpg";
-import social from "./assets/images/social.jpg";
-import analytics from "./assets/images/analytics.jpg";
-import convImg from "./assets/images/slide4.jpg";
-import revenueImg from "./assets/images/slide10.jpg";
-import metaImg from "./assets/images/slide8.jpg";
-import salesImg from "./assets/images/slide1.jpg";
-import cpcImg from "./assets/images/slide2.jpg";
-import growthImg from "./assets/images/slide3.jpg";
-import slide1 from "./assets/images/slide1.jpg";
-import slide2 from "./assets/images/slide2.jpg";
-import slide3 from "./assets/images/slide3.jpg";
-import slide4 from "./assets/images/slide4.jpg";
-import slide5 from "./assets/images/slide5.jpg";
-import slide6 from "./assets/images/slide6.jpg";
-import slide7 from "./assets/images/slide7.jpg";
-import slide8 from "./assets/images/slide8.jpg";
-import slide9 from "./assets/images/slide9.jpg";
-import slide10 from "./assets/images/slide10.jpg";
+
+import ecommerce from "./assets/images/ecommerce.webp";
+import watch from "./assets/images/watch.webp";
+import shopify from "./assets/images/shopify.webp";
+import funnel from "./assets/images/funnel.webp";
+import branding from "./assets/images/branding.webp";
+import social from "./assets/images/social.webp";
+import analytics from "./assets/images/analytics.webp";
+import convImg from "./assets/images/slide4.webp";
+import revenueImg from "./assets/images/slide10.webp";
+import metaImg from "./assets/images/slide8.webp";
+import salesImg from "./assets/images/slide1.webp";
+import cpcImg from "./assets/images/slide2.webp";
+import growthImg from "./assets/images/slide3.webp";
+
+// slider images
+import slide1 from "./assets/images/slide1.webp";
+import slide2 from "./assets/images/slide2.webp";
+import slide3 from "./assets/images/slide3.webp";
+import slide4 from "./assets/images/slide4.webp";
+import slide5 from "./assets/images/slide5.webp";
+import slide6 from "./assets/images/slide6.webp";
+import slide7 from "./assets/images/slide7.webp";
+import slide8 from "./assets/images/slide8.webp";
+import slide9 from "./assets/images/slide9.webp";
+import slide10 from "./assets/images/slide10.webp";
 import { motion } from "motion/react";
 import { 
   TrendingUp, 
@@ -265,10 +268,10 @@ export default function App() {
               <div className="absolute -inset-4 bg-emerald-500/20 blur-3xl rounded-full"></div>
               <div className="relative glass-card overflow-hidden rounded-3xl border-white/20">
                 <img
-  src={ecommerce}
-  alt="E-commerce"
-  className="w-full h-full object-cover rounded-2xl"
-/>
+                src={ecommerce}
+                alt="E-commerce"
+                className="w-full h-full object-cover rounded-2xl"
+            />
               </div>
             </motion.div>
           </div>
